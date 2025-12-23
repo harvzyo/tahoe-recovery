@@ -23,8 +23,8 @@ jobs:
           sudo hdiutil create -o /tmp/Sequoia -size 20000m -volname 'Sequoia' -layout SPUD -fs HFS+J
           sudo hdiutil attach /tmp/Sequoia.dmg -noverify -mountpoint /Volumes/Sequoia
           sleep 10
-          sudo /Applications/'Install macOS Beta'.app/Contents/Resources/createinstallmedia --volume /Volumes/Sequoia --nointeraction
-          cp -R '/Volumes/Install macOS Beta/BaseSystem' /tmp/BaseSystem
+          sudo /Applications/'Install macOS'.app/Contents/Resources/createinstallmedia --volume /Volumes/Sequoia --nointeraction
+          cp -R '/Volumes/Install macOS/BaseSystem' /tmp/BaseSystem
 
       - name: Upload com.apple.recovery.boot
         uses: actions/upload-artifact@v4
