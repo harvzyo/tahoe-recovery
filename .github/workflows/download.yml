@@ -20,7 +20,7 @@ jobs:
 
       - name: Generate macOS Installer
         run: |
-          sudo hdiutil create -o /tmp/Sequoia -size 20000m -volname 'Tahoe' -layout SPUD -fs HFS+J
+          sudo hdiutil create -o /tmp/Sequoia -size 20000m -volname 'Sequoia' -layout SPUD -fs HFS+J
           sudo hdiutil attach /tmp/Sequoia.dmg -noverify -mountpoint /Volumes/Sequoia
           sleep 10
           sudo /Applications/'Install macOS Beta'.app/Contents/Resources/createinstallmedia --volume /Volumes/Sequoia --nointeraction
